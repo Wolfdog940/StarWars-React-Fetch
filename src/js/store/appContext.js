@@ -22,8 +22,8 @@ const injectContext = PassedComponent => {
 		);
 
 		useEffect(() => {
-			state.actions.getCharecters()
-			state.actions.getPlanets()
+			state.actions.getPlanets(),
+			state.actions.getCharecters(),
 			state.actions.getVehicles()
 		}, []);
 
