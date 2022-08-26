@@ -1,11 +1,13 @@
-import React from "react";
+import React,{useContext} from "react";
 
 import "../../styles/home.css";
 import Character from "../component/character.jsx";
 import Vehicles from "../component/vehicles.jsx";
 import Planets from "../component/planets.jsx";
 import { Context } from "../store/appContext";
-import { useContext } from "react/cjs/react.development";
+
+
+
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
@@ -18,7 +20,7 @@ export const Home = () => {
         <div className="d-flex overflow-auto">
           {store.character.map((item,i) => (
             
-              <Character key={i} index={i} item={item} type="character" />
+              <Character key={i} index={i} item={item} type={"characters"} />
             
           ))}
         </div>
@@ -28,7 +30,7 @@ export const Home = () => {
         <div className="d-flex overflow-auto">
           {store.planets.map((item,i) => (
             
-              <Planets key={i} index={i} item={item} type="planets" />
+              <Planets key={i} index={i} item={item}  />
             
           ))}
         </div>
@@ -38,11 +40,12 @@ export const Home = () => {
         <div className="d-flex overflow-auto">
           {store.vehicles.map((item,i) => (
             
-              <Vehicles key={i} index={i} item={item} type="vehicles" />
+              <Vehicles key={i} index={i} item={item}  />
             
           ))}
         </div>
       </div>
+   
     </div>
   );
 };

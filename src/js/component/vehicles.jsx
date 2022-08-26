@@ -6,7 +6,7 @@ import "../../styles/home.css";
 const Vehicles = (props) => {
     const {item} =props;
   return (
-    <div className="card remwidth bg-dark text-warning">
+    <div className="card  bg-dark text-warning">
         
         <img src={"https://starwars-visualguide.com/assets/img/vehicles/"+(props.index+4)+".jpg"
               
@@ -18,8 +18,8 @@ const Vehicles = (props) => {
           <div>Model : {item.model}</div>
           <div>Manufacturer : {item.manufacturer} </div>
         </div>
-        <Link to="./info">
-					<button className="btn btn-primary">More info!</button>
+        <Link to={"./info"+item}>
+        <button className="btn btn-primary">More info!</button>
 				</Link>
       </div>
     </div>

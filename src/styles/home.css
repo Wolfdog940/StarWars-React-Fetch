@@ -6,12 +6,16 @@ background-color: black;
 
 
 .card{
-     
-    width:18rem;
    
-    margin: 2rem;
+   
+}
+   
 
 
 
 
+
+img{
+    width: 100%;
+    font-style: italic;
 }

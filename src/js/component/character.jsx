@@ -4,14 +4,16 @@ import "../../styles/home.css";
 
 
 const Character = (props) => {
-    const {item} =props;
-    
+    const {item,index,type} =props;
+   
+  
+  
    
  
    
     
   return (
-    <div className="card remwidth bg-dark text-warning">
+    <div className="card  bg-dark text-warning">
        
        <img src={"https://starwars-visualguide.com/assets/img/characters/"+(props.index+1)+".jpg"
               //https://starwars-visualguide.com/assets/img/characters/1.jpg
@@ -23,11 +25,12 @@ const Character = (props) => {
           <div>Hair Color : {item.hair_color}</div>
           <div>Eye Color: {item.eye_color} </div>
         </div>
-        <Link to="./info">
+        <Link to={"/info/"+index}>
 					<button className="btn btn-primary">More info!</button>
 				</Link>
       </div>
     </div>
+    
   );
 };
 

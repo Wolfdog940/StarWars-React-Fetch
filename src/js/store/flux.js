@@ -5,6 +5,8 @@ const getState = ({ getStore, getActions, setStore }) => {
       character: [],
       vehicles: [],
       planets: [],
+     
+     
     },
     actions: {
       getCharecters: () => {
@@ -27,6 +29,8 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((data) =>setStore({planets: data.results}) )
           .catch((err) => console.error(err));
       },
+      
+      
     },
   };
 };

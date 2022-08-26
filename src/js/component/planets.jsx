@@ -1,12 +1,15 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
 
 const Planets = (props) => {
-    const {item} =props;
+
+
+    const {item,index} =props;
+
+
   return (
-    <div className="card remwidth bg-dark text-warning">
+    <div className="card  bg-dark text-warning">
      {props.index+1==1?
       <img src={"https://qph.cf2.quoracdn.net/main-qimg-30fe49cbb053e20c04d2704f737acce3-lq"
               
@@ -21,7 +24,7 @@ const Planets = (props) => {
           <div>Terrain : {item.terrain} </div>
           <div>Population : {item.population}</div>
         </div>
-        <Link to="./info">
+        <Link to={"/info/"+index}>
 					<button className="btn btn-primary">More info!</button>
 				</Link>
       </div>
