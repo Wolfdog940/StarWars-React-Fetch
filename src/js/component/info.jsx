@@ -27,7 +27,7 @@ const Info = (props) => {
    
     
   return (
-    (personajes)?
+    (type==("characters"))?
     <div className="info">
       <div className="text-warning">{personajes?.name}</div>
     <div className="text-warning">{personajes?.gender}</div>
