@@ -5,6 +5,9 @@ import "../../styles/home.css";
 
 const Character = (props) => {
     const {item,index,type} =props;
+    
+
+ 
    
   
   
@@ -25,7 +28,7 @@ const Character = (props) => {
           <div>Hair Color : {item.hair_color}</div>
           <div>Eye Color: {item.eye_color} </div>
         </div>
-        <Link to={"/info/"+index}>
+        <Link to={"/info/"+index+"/"+type}>
 					<button className="btn btn-primary">More info!</button>
 				</Link>
       </div>

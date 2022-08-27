@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../../styles/home.css";
 
 const Vehicles = (props) => {
-    const {item} =props;
+    const {item,index,type} =props;
   return (
     <div className="card  bg-dark text-warning">
         
@@ -18,7 +18,7 @@ const Vehicles = (props) => {
           <div>Model : {item.model}</div>
           <div>Manufacturer : {item.manufacturer} </div>
         </div>
-        <Link to={"./info"+item}>
+        <Link to={"/info/"+index+"/"+type}>
         <button className="btn btn-primary">More info!</button>
 				</Link>
       </div>

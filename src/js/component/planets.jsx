@@ -5,7 +5,7 @@ import "../../styles/home.css";
 const Planets = (props) => {
 
 
-    const {item,index} =props;
+    const {item,index,type} =props;
 
 
   return (
@@ -24,7 +24,7 @@ const Planets = (props) => {
           <div>Terrain : {item.terrain} </div>
           <div>Population : {item.population}</div>
         </div>
-        <Link to={"/info/"+index}>
+        <Link to={"/info/"+index+"/"+type}>
 					<button className="btn btn-primary">More info!</button>
 				</Link>
       </div>

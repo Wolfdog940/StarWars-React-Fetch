@@ -30,7 +30,7 @@ export const Home = () => {
         <div className="d-flex overflow-auto">
           {store.planets.map((item,i) => (
             
-              <Planets key={i} index={i} item={item}  />
+              <Planets key={i} index={i} item={item} type={"planets"}  />
             
           ))}
         </div>
@@ -40,7 +40,7 @@ export const Home = () => {
         <div className="d-flex overflow-auto">
           {store.vehicles.map((item,i) => (
             
-              <Vehicles key={i} index={i} item={item}  />
+              <Vehicles key={i} index={i} item={item} type={"vehicles"}  />
             
           ))}
         </div>
