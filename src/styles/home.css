@@ -5,10 +5,6 @@ background-color: black;
 }
 
 
-.card{
-   
-   
-}
    
 
 
@@ -18,4 +14,11 @@ background-color: black;
 img{
     width: 100%;
     font-style: italic;
+}
+
+.yellow{
+    background-color:yellow
+}
+.white{
+    background-color: white;
 }

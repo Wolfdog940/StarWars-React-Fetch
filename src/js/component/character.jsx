@@ -25,6 +25,7 @@ const Character = (props) => {
         <Link to={"/info/" + index + "/" + type}>
           <button className="btn btn-primary">More info!</button>
         </Link>
+        <span><i className="far fa-heart"></i></span>
       </div>
     </div>
   );

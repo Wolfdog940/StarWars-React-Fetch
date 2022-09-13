@@ -1,10 +1,12 @@
 import React from "react";
+import { useState } from "react";
 
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
 
 const Vehicles = (props) => {
-    const {item,index,type} =props;
+    const {item,index,type} = props;
+    const[color,setColor]= useState("")
   return (
     <div className="card  bg-dark text-warning">
         
@@ -21,6 +23,9 @@ const Vehicles = (props) => {
         <Link to={"/info/"+index+"/"+type}>
         <button className="btn btn-primary">More info!</button>
 				</Link>
+        <span onClick={() => setColor("yellow")}
+              onDoubleClick={() => setColor("")}
+            className={"yellow " + (color === "yellow" ? "yellow":null || color === "" ? "white":"")}><i className="far fa-heart"></i></span>
       </div>
     </div>
   );
