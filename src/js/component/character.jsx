@@ -7,7 +7,7 @@ const Character = (props) => {
 
   return (
     <div className="card  bg-dark text-warning">
-      <img
+      <img 
         src={
           "https://starwars-visualguide.com/assets/img/characters/" +
           (props.index + 1) +
@@ -25,7 +25,12 @@ const Character = (props) => {
         <Link to={"/info/" + index + "/" + type}>
           <button className="btn btn-primary">More info!</button>
         </Link>
-        <span><i className="far fa-heart"></i></span>
+        <span onClick={() => setColor("yellow")}
+              onDoubleClick={() => setColor("")}
+            className={"yellow " + (color === "yellow" ? "yellow":null || color === "" ? "white":"")}>
+ 
+ 
+            <i className="fas fa-heart"></i></span>
       </div>
     </div>
   );

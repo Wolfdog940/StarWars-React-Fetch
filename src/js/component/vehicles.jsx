@@ -25,7 +25,10 @@ const Vehicles = (props) => {
 				</Link>
         <span onClick={() => setColor("yellow")}
               onDoubleClick={() => setColor("")}
-            className={"yellow " + (color === "yellow" ? "yellow":null || color === "" ? "white":"")}><i className="far fa-heart"></i></span>
+            className={"yellow " + (color === "yellow" ? "yellow":null || color === "" ? "white":"")}>
+ 
+ 
+            <i className="fas fa-heart"></i></span>
       </div>
     </div>
   );

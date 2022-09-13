@@ -27,7 +27,12 @@ const Planets = (props) => {
         <Link to={"/info/"+index+"/"+type}>
 					<button className="btn btn-primary">More info!</button>
 				</Link>
-        <span><i className="far fa-heart"></i></span>
+        <span onClick={() => setColor("yellow")}
+              onDoubleClick={() => setColor("")}
+            className={"yellow " + (color === "yellow" ? "yellow":null || color === "" ? "white":"")}>
+ 
+ 
+            <i className="fas fa-heart"></i></span>
       </div>
     </div>
   );

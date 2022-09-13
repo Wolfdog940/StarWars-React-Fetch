@@ -1,24 +1,16 @@
 body{
 background-color: black;
-
-
 }
 
-
-   
-
-
-
-
-
 img{
-    width: 100%;
+    width: auto;
     font-style: italic;
 }
 
 .yellow{
-    background-color:yellow
+    color:yellow
 }
+
 .white{
-    background-color: white;
+    color: white;
 }
