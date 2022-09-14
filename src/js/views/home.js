@@ -17,7 +17,7 @@ export const Home = () => {
     <div className="text-center mt-5">
       <div className="row">
         <h1 className="">Characters</h1>
-        <div className="d-flex overflow-auto">
+        <div className="d-flex">
           {store.character.map((item,i) => (
             
               <Character key={i} index={i} item={item} type={"characters"} />
@@ -27,7 +27,7 @@ export const Home = () => {
       </div>
 	  <div className="row">
         <h1 className="">Planets</h1>
-        <div className="d-flex overflow-auto">
+        <div className="d-flex">
           {store.planets.map((item,i) => (
             
               <Planets key={i} index={i} item={item} type={"planets"}  />
@@ -37,7 +37,7 @@ export const Home = () => {
       </div>
 	  <div className="row">
         <h1 className="">Vehicles</h1>
-        <div className="d-flex overflow-auto">
+        <div className="d-flex">
           {store.vehicles.map((item,i) => (
             
               <Vehicles key={i} index={i} item={item} type={"vehicles"}  />

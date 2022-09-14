@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
-import { useState } from "react";
+import { Context } from "../store/appContext";
+import { useState,useContext } from "react";
 
 const Character = (props) => {
   const { item, index, type } = props;
   const [color, setColor] = useState("");
-
+  const { store, actions } = useContext(Context);
   return (
     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
     <div className="carousel-inner">
@@ -32,20 +33,19 @@ const Character = (props) => {
           <Link to={"/info/" + index + "/" + type}>
             <button className="btn btn-primary">More info!</button>
           </Link>
-          <span
-            onClick={() => setColor("yellow")}
-            onDoubleClick={() => setColor("")}
-            className={
-              "yellow " +
-              (color === "yellow"
-                ? "yellow"
-                : null || color === ""
-                ? "white"
-                : "")
-            }
-          >
-            <i className="fas fa-heart"></i>
-          </span>
+          {!store.favorites.includes(
+                store.character[props.index].name
+              ) ? (
+                <i
+                className="fas fa-heart"
+                  onClick={() =>
+                    actions.getFavorites(store.character[props.index].name)
+                  }
+                ></i>
+              ) : (
+                <i className="fa-solid fa-star"></i>
+              )}
+          
         </div>
       </div>
       
@@ -59,7 +59,9 @@ const Character = (props) => {
       <span className="visually-hidden">Siguiente</span>
     </button>
   </div>
+  
   );
+  
 };
 
 export default Character;
