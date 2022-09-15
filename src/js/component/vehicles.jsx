@@ -9,11 +9,9 @@ const Vehicles = (props) => {
   const [color, setColor] = useState("");
   const { store, actions } = useContext(Context);
   return (
-    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-  <div className="carousel-inner">
-    <div className="carousel-item active">
+  
       
-    <div className="card  bg-dark text-warning">
+    <div className="card  bg-dark text-warning col-3 m-3">
       <img
         src={
           "https://starwars-visualguide.com/assets/img/vehicles/" +
@@ -46,17 +44,7 @@ const Vehicles = (props) => {
       </div>
     </div>
     
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Anterior</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Siguiente</span>
-  </button>
-</div>
-</div>
+ 
   );
 };
 

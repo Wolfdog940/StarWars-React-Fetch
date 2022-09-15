@@ -8,7 +8,7 @@ export const Navbar = () => {
   const { store, actions } = useContext(Context);
   
   return (
-    <nav className="navbar navbar-light bg-dark m-5">
+    <nav className="navbar navbar-light bg-dark m-3">
       <Link to="/">
         <span className="navbar-brand mb-0 h1">React Boilerplate</span>
       </Link>
@@ -26,16 +26,16 @@ export const Navbar = () => {
           <ul
             
           
-            className="dropdown-menu bg-warning"
+            className="dropdown-menu bg-warning "
             aria-labelledby="dropdownMenuButton1"
           >
             {store.favorites.map((item, i) => (
               <li className="d-flex" key={i}>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item d-inline" href="#">
                   {item}
                 </a>
                 <i
-                  className="fas fa-trash-alt"
+                  className="fas fa-trash-alt m-0"
                   onClick={() => {
                     actions.deleteFavorites(i);
                   }}
